@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
+import MusicKit
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Button(action: handleMusicAuth) {
+            Text("Test Prompt")
         }
-        .padding()
     }
+}
+
+private func handleMusicAuth() {
+    print("Trigger")
 }
 
 #Preview {

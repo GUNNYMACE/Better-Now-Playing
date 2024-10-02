@@ -7,12 +7,45 @@
 		<key>Better Now Playing Watch App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Better Now Playing.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>BB95F4132CAD7717000A9A91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB95F4232CAD7719000A9A91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB95F42D2CAD7719000A9A91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB95F4392CAD7719000A9A91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB95F44B2CAD771A000A9A91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB95F4552CAD771A000A9A91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
