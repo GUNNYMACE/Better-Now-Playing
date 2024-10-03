@@ -7,18 +7,42 @@
 
 import SwiftUI
 import MusicKit
+import MediaPlayer
+
+
 
 struct ContentView: View {
-    
+    @State var musicAuth = MusicKit.MusicAuthorization.currentStatus
+    @State var currentSongTitle = ""
+    @State var currentSongArtist = ""
     var body: some View {
-        Button(action: handleMusicAuth) {
-            Text("Test Prompt")
+        
+        
+        if (musicAuth == .authorized) {
+            Text(currentSongTitle)
+            Text(currentSongArtist)
+        } else {
+            Text("Not Authorized")
         }
+        
+        
+        Button {
+            print("Trigger")
+            Task {
+                await MusicKit.MusicAuthorization.request()
+            }
+            if MusicKit.MusicAuthorization.currentStatus == .authorized {
+                print("Authorized")
+            } else {
+                print("Not Authorized")
+            }
+            currentSongTitle  = (MPMusicPlayerController.systemMusicPlayer.nowPlayingItem?.title)!
+            currentSongArtist = (MPMusicPlayerController.systemMusicPlayer.nowPlayingItem?.artist)!
+        } label: {
+            Text("Get Current Apple Music Song")
+        }
+        
     }
-}
-
-private func handleMusicAuth() {
-    print("Trigger")
 }
 
 #Preview {
