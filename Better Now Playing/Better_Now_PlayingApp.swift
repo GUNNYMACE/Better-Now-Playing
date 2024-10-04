@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import WatchConnectivity
 
 @main
 struct Better_Now_PlayingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            iPhoneContentView()
         }
     }
 }

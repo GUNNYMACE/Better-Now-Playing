@@ -7,39 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB823CA82CC1CAEC001910AA /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB823CA72CC1CAEC001910AA /* WatchConnectivity.framework */; };
 		BB95F43B2CAD7719000A9A91 /* Better Now Playing Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BB95F43A2CAD7719000A9A91 /* Better Now Playing Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BB95F4252CAD7719000A9A91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB95F40C2CAD7717000A9A91 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB95F4132CAD7717000A9A91;
-			remoteInfo = "Better Now Playing";
-		};
-		BB95F42F2CAD7719000A9A91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB95F40C2CAD7717000A9A91 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB95F4132CAD7717000A9A91;
-			remoteInfo = "Better Now Playing";
-		};
 		BB95F43C2CAD7719000A9A91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB95F40C2CAD7717000A9A91 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB95F4392CAD7719000A9A91;
-			remoteInfo = "Better Now Playing Watch App";
-		};
-		BB95F44D2CAD771A000A9A91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB95F40C2CAD7717000A9A91 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB95F4392CAD7719000A9A91;
-			remoteInfo = "Better Now Playing Watch App";
-		};
-		BB95F4572CAD771A000A9A91 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BB95F40C2CAD7717000A9A91 /* Project object */;
 			proxyType = 1;
@@ -49,6 +22,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		BB823CBC2CC1DE20001910AA /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB823CCE2CC1DE4E001910AA /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB823CE72CC1DE82001910AA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB95F4632CAD771A000A9A91 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,12 +66,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BB823CA72CC1CAEC001910AA /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		BB823CD42CC1DE81001910AA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BB823CD62CC1DE81001910AA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		BB95F4142CAD7717000A9A91 /* Better Now Playing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Now Playing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB95F4242CAD7719000A9A91 /* Better Now PlayingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better Now PlayingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB95F42E2CAD7719000A9A91 /* Better Now PlayingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better Now PlayingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB95F43A2CAD7719000A9A91 /* Better Now Playing Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Now Playing Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB95F44C2CAD771A000A9A91 /* Better Now Playing Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better Now Playing Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB95F4562CAD771A000A9A91 /* Better Now Playing Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better Now Playing Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -77,29 +79,9 @@
 			path = "Better Now Playing";
 			sourceTree = "<group>";
 		};
-		BB95F4272CAD7719000A9A91 /* Better Now PlayingTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Better Now PlayingTests";
-			sourceTree = "<group>";
-		};
-		BB95F4312CAD7719000A9A91 /* Better Now PlayingUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Better Now PlayingUITests";
-			sourceTree = "<group>";
-		};
 		BB95F43E2CAD7719000A9A91 /* Better Now Playing Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Better Now Playing Watch App";
-			sourceTree = "<group>";
-		};
-		BB95F44F2CAD771A000A9A91 /* Better Now Playing Watch AppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Better Now Playing Watch AppTests";
-			sourceTree = "<group>";
-		};
-		BB95F4592CAD771A000A9A91 /* Better Now Playing Watch AppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Better Now Playing Watch AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -109,20 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB95F4212CAD7719000A9A91 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB95F42B2CAD7719000A9A91 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				BB823CA82CC1CAEC001910AA /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,32 +102,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB95F4492CAD771A000A9A91 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB95F4532CAD771A000A9A91 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB823CA62CC1CAEC001910AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB823CA72CC1CAEC001910AA /* WatchConnectivity.framework */,
+				BB823CD42CC1DE81001910AA /* WidgetKit.framework */,
+				BB823CD62CC1DE81001910AA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB95F40B2CAD7717000A9A91 = {
 			isa = PBXGroup;
 			children = (
 				BB95F4162CAD7717000A9A91 /* Better Now Playing */,
-				BB95F4272CAD7719000A9A91 /* Better Now PlayingTests */,
-				BB95F4312CAD7719000A9A91 /* Better Now PlayingUITests */,
 				BB95F43E2CAD7719000A9A91 /* Better Now Playing Watch App */,
-				BB95F44F2CAD771A000A9A91 /* Better Now Playing Watch AppTests */,
-				BB95F4592CAD771A000A9A91 /* Better Now Playing Watch AppUITests */,
+				BB823CA62CC1CAEC001910AA /* Frameworks */,
 				BB95F4152CAD7717000A9A91 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -167,11 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				BB95F4142CAD7717000A9A91 /* Better Now Playing.app */,
-				BB95F4242CAD7719000A9A91 /* Better Now PlayingTests.xctest */,
-				BB95F42E2CAD7719000A9A91 /* Better Now PlayingUITests.xctest */,
 				BB95F43A2CAD7719000A9A91 /* Better Now Playing Watch App.app */,
-				BB95F44C2CAD771A000A9A91 /* Better Now Playing Watch AppTests.xctest */,
-				BB95F4562CAD771A000A9A91 /* Better Now Playing Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +145,7 @@
 				BB95F4112CAD7717000A9A91 /* Frameworks */,
 				BB95F4122CAD7717000A9A91 /* Resources */,
 				BB95F4632CAD771A000A9A91 /* Embed Watch Content */,
+				BB823CBC2CC1DE20001910AA /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
@@ -203,52 +162,6 @@
 			productReference = BB95F4142CAD7717000A9A91 /* Better Now Playing.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BB95F4232CAD7719000A9A91 /* Better Now PlayingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB95F4672CAD771A000A9A91 /* Build configuration list for PBXNativeTarget "Better Now PlayingTests" */;
-			buildPhases = (
-				BB95F4202CAD7719000A9A91 /* Sources */,
-				BB95F4212CAD7719000A9A91 /* Frameworks */,
-				BB95F4222CAD7719000A9A91 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB95F4262CAD7719000A9A91 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BB95F4272CAD7719000A9A91 /* Better Now PlayingTests */,
-			);
-			name = "Better Now PlayingTests";
-			packageProductDependencies = (
-			);
-			productName = "Better Now PlayingTests";
-			productReference = BB95F4242CAD7719000A9A91 /* Better Now PlayingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BB95F42D2CAD7719000A9A91 /* Better Now PlayingUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB95F46A2CAD771A000A9A91 /* Build configuration list for PBXNativeTarget "Better Now PlayingUITests" */;
-			buildPhases = (
-				BB95F42A2CAD7719000A9A91 /* Sources */,
-				BB95F42B2CAD7719000A9A91 /* Frameworks */,
-				BB95F42C2CAD7719000A9A91 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB95F4302CAD7719000A9A91 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BB95F4312CAD7719000A9A91 /* Better Now PlayingUITests */,
-			);
-			name = "Better Now PlayingUITests";
-			packageProductDependencies = (
-			);
-			productName = "Better Now PlayingUITests";
-			productReference = BB95F42E2CAD7719000A9A91 /* Better Now PlayingUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		BB95F4392CAD7719000A9A91 /* Better Now Playing Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB95F4602CAD771A000A9A91 /* Build configuration list for PBXNativeTarget "Better Now Playing Watch App" */;
@@ -256,6 +169,8 @@
 				BB95F4362CAD7719000A9A91 /* Sources */,
 				BB95F4372CAD7719000A9A91 /* Frameworks */,
 				BB95F4382CAD7719000A9A91 /* Resources */,
+				BB823CCE2CC1DE4E001910AA /* Embed ExtensionKit Extensions */,
+				BB823CE72CC1DE82001910AA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -271,52 +186,6 @@
 			productReference = BB95F43A2CAD7719000A9A91 /* Better Now Playing Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BB95F44B2CAD771A000A9A91 /* Better Now Playing Watch AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB95F46D2CAD771A000A9A91 /* Build configuration list for PBXNativeTarget "Better Now Playing Watch AppTests" */;
-			buildPhases = (
-				BB95F4482CAD771A000A9A91 /* Sources */,
-				BB95F4492CAD771A000A9A91 /* Frameworks */,
-				BB95F44A2CAD771A000A9A91 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB95F44E2CAD771A000A9A91 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BB95F44F2CAD771A000A9A91 /* Better Now Playing Watch AppTests */,
-			);
-			name = "Better Now Playing Watch AppTests";
-			packageProductDependencies = (
-			);
-			productName = "Better Now Playing Watch AppTests";
-			productReference = BB95F44C2CAD771A000A9A91 /* Better Now Playing Watch AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BB95F4552CAD771A000A9A91 /* Better Now Playing Watch AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB95F4702CAD771A000A9A91 /* Build configuration list for PBXNativeTarget "Better Now Playing Watch AppUITests" */;
-			buildPhases = (
-				BB95F4522CAD771A000A9A91 /* Sources */,
-				BB95F4532CAD771A000A9A91 /* Frameworks */,
-				BB95F4542CAD771A000A9A91 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB95F4582CAD771A000A9A91 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BB95F4592CAD771A000A9A91 /* Better Now Playing Watch AppUITests */,
-			);
-			name = "Better Now Playing Watch AppUITests";
-			packageProductDependencies = (
-			);
-			productName = "Better Now Playing Watch AppUITests";
-			productReference = BB95F4562CAD771A000A9A91 /* Better Now Playing Watch AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -330,24 +199,8 @@
 					BB95F4132CAD7717000A9A91 = {
 						CreatedOnToolsVersion = 16.0;
 					};
-					BB95F4232CAD7719000A9A91 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = BB95F4132CAD7717000A9A91;
-					};
-					BB95F42D2CAD7719000A9A91 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = BB95F4132CAD7717000A9A91;
-					};
 					BB95F4392CAD7719000A9A91 = {
 						CreatedOnToolsVersion = 16.0;
-					};
-					BB95F44B2CAD771A000A9A91 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = BB95F4392CAD7719000A9A91;
-					};
-					BB95F4552CAD771A000A9A91 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = BB95F4392CAD7719000A9A91;
 					};
 				};
 			};
@@ -366,11 +219,7 @@
 			projectRoot = "";
 			targets = (
 				BB95F4132CAD7717000A9A91 /* Better Now Playing */,
-				BB95F4232CAD7719000A9A91 /* Better Now PlayingTests */,
-				BB95F42D2CAD7719000A9A91 /* Better Now PlayingUITests */,
 				BB95F4392CAD7719000A9A91 /* Better Now Playing Watch App */,
-				BB95F44B2CAD771A000A9A91 /* Better Now Playing Watch AppTests */,
-				BB95F4552CAD771A000A9A91 /* Better Now Playing Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -383,35 +232,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB95F4222CAD7719000A9A91 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB95F42C2CAD7719000A9A91 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BB95F4382CAD7719000A9A91 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB95F44A2CAD771A000A9A91 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB95F4542CAD771A000A9A91 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,35 +249,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB95F4202CAD7719000A9A91 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB95F42A2CAD7719000A9A91 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BB95F4362CAD7719000A9A91 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB95F4482CAD771A000A9A91 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB95F4522CAD771A000A9A91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -466,30 +259,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BB95F4262CAD7719000A9A91 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB95F4132CAD7717000A9A91 /* Better Now Playing */;
-			targetProxy = BB95F4252CAD7719000A9A91 /* PBXContainerItemProxy */;
-		};
-		BB95F4302CAD7719000A9A91 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB95F4132CAD7717000A9A91 /* Better Now Playing */;
-			targetProxy = BB95F42F2CAD7719000A9A91 /* PBXContainerItemProxy */;
-		};
 		BB95F43D2CAD7719000A9A91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BB95F4392CAD7719000A9A91 /* Better Now Playing Watch App */;
 			targetProxy = BB95F43C2CAD7719000A9A91 /* PBXContainerItemProxy */;
-		};
-		BB95F44E2CAD771A000A9A91 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB95F4392CAD7719000A9A91 /* Better Now Playing Watch App */;
-			targetProxy = BB95F44D2CAD771A000A9A91 /* PBXContainerItemProxy */;
-		};
-		BB95F4582CAD771A000A9A91 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB95F4392CAD7719000A9A91 /* Better Now Playing Watch App */;
-			targetProxy = BB95F4572CAD771A000A9A91 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -613,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Better Now Playing Watch App/Better Now Playing Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Better Now Playing Watch App/Preview Content\"";
@@ -644,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Better Now Playing Watch App/Better Now Playing Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Better Now Playing Watch App/Preview Content\"";
@@ -676,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Better Now Playing/Better Now Playing.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Better Now Playing/Preview Content\"";
@@ -716,6 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Better Now Playing/Better Now Playing.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Better Now Playing/Preview Content\"";
@@ -752,166 +529,6 @@
 			};
 			name = Release;
 		};
-		BB95F4682CAD771A000A9A91 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z5PA4H55W8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-PlayingTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Better Now Playing.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Better Now Playing";
-			};
-			name = Debug;
-		};
-		BB95F4692CAD771A000A9A91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z5PA4H55W8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-PlayingTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Better Now Playing.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Better Now Playing";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BB95F46B2CAD771A000A9A91 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z5PA4H55W8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-PlayingUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Better Now Playing";
-			};
-			name = Debug;
-		};
-		BB95F46C2CAD771A000A9A91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z5PA4H55W8;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-PlayingUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Better Now Playing";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BB95F46E2CAD771A000A9A91 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z5PA4H55W8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-Playing-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Better Now Playing Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Better Now Playing Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 11.0;
-			};
-			name = Debug;
-		};
-		BB95F46F2CAD771A000A9A91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z5PA4H55W8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-Playing-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Better Now Playing Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Better Now Playing Watch App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 11.0;
-			};
-			name = Release;
-		};
-		BB95F4712CAD771A000A9A91 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z5PA4H55W8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-Playing-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "Better Now Playing Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 11.0;
-			};
-			name = Debug;
-		};
-		BB95F4722CAD771A000A9A91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z5PA4H55W8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-Playing-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "Better Now Playing Watch App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 11.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -938,42 +555,6 @@
 			buildConfigurations = (
 				BB95F4652CAD771A000A9A91 /* Debug */,
 				BB95F4662CAD771A000A9A91 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB95F4672CAD771A000A9A91 /* Build configuration list for PBXNativeTarget "Better Now PlayingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB95F4682CAD771A000A9A91 /* Debug */,
-				BB95F4692CAD771A000A9A91 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB95F46A2CAD771A000A9A91 /* Build configuration list for PBXNativeTarget "Better Now PlayingUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB95F46B2CAD771A000A9A91 /* Debug */,
-				BB95F46C2CAD771A000A9A91 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB95F46D2CAD771A000A9A91 /* Build configuration list for PBXNativeTarget "Better Now Playing Watch AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB95F46E2CAD771A000A9A91 /* Debug */,
-				BB95F46F2CAD771A000A9A91 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB95F4702CAD771A000A9A91 /* Build configuration list for PBXNativeTarget "Better Now Playing Watch AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB95F4712CAD771A000A9A91 /* Debug */,
-				BB95F4722CAD771A000A9A91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
