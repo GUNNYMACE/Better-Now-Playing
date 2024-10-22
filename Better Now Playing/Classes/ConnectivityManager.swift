@@ -8,10 +8,9 @@
 import UIKit
 import WatchConnectivity
 
-class ConnectionProvider: NSObject, WCSessionDelegate {
+class ConnectivityManager: NSObject, WCSessionDelegate {
     private let session: WCSession
-    var currentMusicData: [MusicMetaData] = []
-    var recivedMusicMetaData: [MusicMetaData] = []
+    @Published var currentMusicData: [MusicMetaData] = []
     var lastMessage: CFAbsoluteTime = 0
     
     init(session: WCSession = .default) {
@@ -33,16 +32,14 @@ class ConnectionProvider: NSObject, WCSessionDelegate {
             print("WCSession is not supported")
             return
         }
-        
         session.activate()
     }
     
-    func send(message: [String: Any]) -> Void {
-        session.sendMessage(message, replyHandler: nil) { (error) in
-            print("~Send Error: " + error.localizedDescription)
-        }
-    }
-    
+//    func send(message: [String: Any]) -> Void {
+//        session.sendMessage(message, replyHandler: nil) { (error) in
+//            print("~Send Error: " + error.localizedDescription)
+//        }
+//    }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: (any Error)?) {
         #if os(iOS)
@@ -67,28 +64,28 @@ class ConnectionProvider: NSObject, WCSessionDelegate {
 //        let progObj = ProgramObject()
 //        progObj.initWithData(title: "Title of BNP", speaker: "Me", from: "Now", to: "Later", details: "Time to Game WOMP WOMP")
 //        programs.append(progObj)
-//        
+//
 //        let progObj2 = ProgramObject()
 //        progObj2.initWithData(title: "2Title of BNP", speaker: "2Me", from: "2Now", to: "2Later", details: "2Time to Game WOMP WOMP")
 //        programs.append(progObj2)
-//        
+//
 //        let progObj3 = ProgramObject()
 //        progObj3.initWithData(title: "3Title of BNP", speaker: "3Me", from: "3Now", to: "3Later", details: "3Time to Game WOMP WOMP")
 //        programs.append(progObj3)
-//        
+//
 //        let progObj4 = ProgramObject()
 //        progObj4.initWithData(title: "4Title of BNP", speaker: "4Me", from: "4Now", to: "4Later", details: "4Time to Game WOMP WOMP")
 //        programs.append(progObj4)
-//        
+//
 //        NSKeyedArchiver.setClassName("ProgramObject", for: ProgramObject.self)
 //        let programData = try! NSKeyedArchiver.archivedData(withRootObject: programs, requiringSecureCoding: true)
 //        sendWatchMessage(programData)
 //    }
+    #if os(iOS)
     public func sendMusicData(title: String, artist: String, album: String) {
         currentMusicData.removeAll()
         
-        let currentSong = MusicMetaData()
-        currentSong.initWithData(title: title, artist: artist, album: album)
+        let currentSong = MusicMetaData(songTitle: title, songArtist: artist, songAlbumTitle: album)
         currentMusicData.append(currentSong)
         
         NSKeyedArchiver.setClassName("MusicMetaData", for: MusicMetaData.self)
@@ -114,7 +111,7 @@ class ConnectionProvider: NSObject, WCSessionDelegate {
         
         lastMessage = CFAbsoluteTimeGetCurrent()
     }
-
+    #endif
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("Message GOT!")
@@ -122,13 +119,12 @@ class ConnectionProvider: NSObject, WCSessionDelegate {
             let newData = message["musicIDData"]
             NSKeyedUnarchiver.setClass(MusicMetaData.self, forClassName: "MusicMetaData")
             let loadedData = try! NSKeyedUnarchiver.unarchivedArrayOfObjects(ofClasses: [MusicMetaData.self], from: newData as! Data) as? [MusicMetaData]
-            self.recivedMusicMetaData = loadedData!
+            self.currentMusicData = loadedData!
             print("data received")
-            
         }
     }
     
-    func getRecivedMusicMetaData() -> [MusicMetaData] {
-        return recivedMusicMetaData
+    func getNewMusicData() -> [MusicMetaData] {
+        return currentMusicData
     }
 }

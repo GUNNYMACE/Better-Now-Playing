@@ -7,18 +7,13 @@
 
 import UIKit
 
-public class MusicMetaData: NSObject, ObservableObject, NSSecureCoding {
+public class MusicMetaData: NSObject, ObservableObject, NSSecureCoding, Codable {
     public static var supportsSecureCoding: Bool = true
     
-    let id = UUID()
-//    @Published var title: String?
-//    @Published var speaker: String?
-//    @Published var from: String?
-//    @Published var to: String?
-//    @Published var details: String?
-    @Published var title: String?
-    @Published var artist: String?
-    @Published var album: String?
+    var id = UUID()
+    public var title: String?
+    public var artist: String?
+    public var album: String?
     
     func initWithData(title: String, artist: String, album: String) {
         self.title = title
@@ -32,8 +27,15 @@ public class MusicMetaData: NSObject, ObservableObject, NSSecureCoding {
               let album = coder.decodeObject(forKey: "album") as? String
         else { return nil }
         
-        self.init()
-        self.initWithData(title: title as String, artist: artist as String, album: album as String)
+        self.init(songTitle: title, songArtist: artist, songAlbumTitle: album)
+        //self.initWithData(title: title as String, artist: artist as String, album: album as String)
+    }
+    
+    init(songTitle: String, songArtist: String, songAlbumTitle: String) {
+        title = songTitle
+        artist = songArtist
+        album = songAlbumTitle
+        super.init()
     }
     
     public func encode(with coder: NSCoder) {
@@ -45,4 +47,8 @@ public class MusicMetaData: NSObject, ObservableObject, NSSecureCoding {
     public func getData() -> [String] {
         return [self.title!, self.artist!, self.album!]
     }
+    
+//    public override var description: String {
+//        return "\()"
+//    }
 }

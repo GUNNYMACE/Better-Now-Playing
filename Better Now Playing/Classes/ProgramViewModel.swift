@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import SwiftUICore
+
 
 final class ProgramViewModel: ObservableObject {
-    private(set) var connectivityProvider: ConnectionProvider
+    private(set) var connectivityManager: ConnectivityManager
     
-    init(connectivityProvider: ConnectionProvider) {
-        self.connectivityProvider = connectivityProvider
-        self.connectivityProvider.connect()
+    init(connectivityManager: ConnectivityManager) {
+        self.connectivityManager = connectivityManager
+        self.connectivityManager.connect()
         //self.currentMusicData = viewModel.connectivityProvider.currentMusicData
     }
 }
