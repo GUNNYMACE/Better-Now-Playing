@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB823CA82CC1CAEC001910AA /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB823CA72CC1CAEC001910AA /* WatchConnectivity.framework */; };
+		BB9394872CFD073600758565 /* SpotifyiOS in Frameworks */ = {isa = PBXBuildFile; productRef = BB9394862CFD073600758565 /* SpotifyiOS */; };
 		BB95F43B2CAD7719000A9A91 /* Better Now Playing Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BB95F43A2CAD7719000A9A91 /* Better Now Playing Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BBA6DEB92CD140F5001B0B3F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB823CD42CC1DE81001910AA /* WidgetKit.framework */; };
 		BBA6DEBA2CD140F5001B0B3F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB823CD62CC1DE81001910AA /* SwiftUI.framework */; };
@@ -77,7 +77,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BB823CA72CC1CAEC001910AA /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		BB823CD42CC1DE81001910AA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		BB823CD62CC1DE81001910AA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		BB95F4142CAD7717000A9A91 /* Better Now Playing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Now Playing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,26 +86,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		BB7F0FEF2CC9309C00B62DBC /* Exceptions for "Better Now Playing" folder in "Better Now Playing Watch App" target */ = {
+		BB9B5D212D2EC481007504EB /* Exceptions for "Better Now Playing" folder in "Better Now Playing Watch App" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Classes/ConnectivityManager.swift,
-				Classes/MusicMetaData.swift,
-				Classes/ProgramViewModel.swift,
+				Classes/WatchConnectivty/ConnectivityManager.swift,
+				Classes/WatchConnectivty/MusicMetaData.swift,
+				Classes/WatchConnectivty/ProgramViewModel.swift,
 			);
 			target = BB95F4392CAD7719000A9A91 /* Better Now Playing Watch App */;
+		};
+		BB9B5D222D2EC481007504EB /* Exceptions for "Better Now Playing" folder in "Better Now Playing WidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Classes/WatchConnectivty/ConnectivityManager.swift,
+				Classes/WatchConnectivty/MusicMetaData.swift,
+				Classes/WatchConnectivty/ProgramViewModel.swift,
+			);
+			target = BBA6DEB72CD140F5001B0B3F /* Better Now Playing WidgetsExtension */;
 		};
 		BBA6DEC92CD140F6001B0B3F /* Exceptions for "Better Now Playing Widgets" folder in "Better Now Playing WidgetsExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-			);
-			target = BBA6DEB72CD140F5001B0B3F /* Better Now Playing WidgetsExtension */;
-		};
-		BBA6DECE2CD14828001B0B3F /* Exceptions for "Better Now Playing" folder in "Better Now Playing WidgetsExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Classes/MusicMetaData.swift,
 			);
 			target = BBA6DEB72CD140F5001B0B3F /* Better Now Playing WidgetsExtension */;
 		};
@@ -116,8 +117,8 @@
 		BB95F4162CAD7717000A9A91 /* Better Now Playing */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				BB7F0FEF2CC9309C00B62DBC /* Exceptions for "Better Now Playing" folder in "Better Now Playing Watch App" target */,
-				BBA6DECE2CD14828001B0B3F /* Exceptions for "Better Now Playing" folder in "Better Now Playing WidgetsExtension" target */,
+				BB9B5D212D2EC481007504EB /* Exceptions for "Better Now Playing" folder in "Better Now Playing Watch App" target */,
+				BB9B5D222D2EC481007504EB /* Exceptions for "Better Now Playing" folder in "Better Now Playing WidgetsExtension" target */,
 			);
 			path = "Better Now Playing";
 			sourceTree = "<group>";
@@ -142,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB823CA82CC1CAEC001910AA /* WatchConnectivity.framework in Frameworks */,
+				BB9394872CFD073600758565 /* SpotifyiOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +169,6 @@
 		BB823CA62CC1CAEC001910AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB823CA72CC1CAEC001910AA /* WatchConnectivity.framework */,
 				BB823CD42CC1DE81001910AA /* WidgetKit.framework */,
 				BB823CD62CC1DE81001910AA /* SwiftUI.framework */,
 			);
@@ -220,6 +220,7 @@
 			);
 			name = "Better Now Playing";
 			packageProductDependencies = (
+				BB9394862CFD073600758565 /* SpotifyiOS */,
 			);
 			productName = "Better Now Playing";
 			productReference = BB95F4142CAD7717000A9A91 /* Better Now Playing.app */;
@@ -284,6 +285,7 @@
 				TargetAttributes = {
 					BB95F4132CAD7717000A9A91 = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1620;
 					};
 					BB95F4392CAD7719000A9A91 = {
 						CreatedOnToolsVersion = 16.0;
@@ -302,6 +304,9 @@
 			);
 			mainGroup = BB95F40B2CAD7717000A9A91;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BB9394852CFD073600758565 /* XCRemoteSwiftPackageReference "ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BB95F4152CAD7717000A9A91 /* Products */;
 			projectDirPath = "";
@@ -507,13 +512,13 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Better Now Playing";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Needed to Function";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "GUNNYMACE.Better-Now-Playing";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.GUNNYMACE.Better-Now-Playing";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-Playing.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GUNNYMACE.Better-Now-Playing.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -539,13 +544,13 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Better Now Playing";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Needed to Function";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "GUNNYMACE.Better-Now-Playing";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.GUNNYMACE.Better-Now-Playing";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-Playing.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GUNNYMACE.Better-Now-Playing.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -562,6 +567,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Better Now Playing/Better Now Playing.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -578,14 +584,14 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-Playing";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GUNNYMACE.Better-Now-Playing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -593,6 +599,8 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Better Now Playing/Better Now Playing-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -603,6 +611,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Better Now Playing/Better Now Playing.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -619,14 +628,14 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-Playing";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GUNNYMACE.Better-Now-Playing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -634,6 +643,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Better Now Playing/Better Now Playing-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -660,7 +670,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-Playing.watchkitapp.Better-Now-Playing-Widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GUNNYMACE.Better-Now-Playing.watchkitapp.Better-Now-Playing-Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -691,7 +701,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "GUNNYMACE.Better-Now-Playing.watchkitapp.Better-Now-Playing-Widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GUNNYMACE.Better-Now-Playing.watchkitapp.Better-Now-Playing-Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -743,6 +753,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB9394852CFD073600758565 /* XCRemoteSwiftPackageReference "ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spotify/ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB9394862CFD073600758565 /* SpotifyiOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB9394852CFD073600758565 /* XCRemoteSwiftPackageReference "ios-sdk" */;
+			productName = SpotifyiOS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB95F40C2CAD7717000A9A91 /* Project object */;
 }
