@@ -86,6 +86,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BB51A1A82D68B19500FB7C90 /* Exceptions for "Better Now Playing Watch App" folder in "Better Now Playing" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				Better_Now_PlayingApp.swift,
+				ContentView.swift,
+				"Preview Content/Preview Assets.xcassets",
+			);
+			target = BB95F4132CAD7717000A9A91 /* Better Now Playing */;
+		};
+		BB51A1A92D68B19500FB7C90 /* Exceptions for "Better Now Playing Watch App" folder in "Better Now Playing Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				Better_Now_PlayingApp.swift,
+				ContentView.swift,
+				"Preview Content/Preview Assets.xcassets",
+			);
+			target = BB95F4392CAD7719000A9A91 /* Better Now Playing Watch App */;
+		};
 		BB9B5D212D2EC481007504EB /* Exceptions for "Better Now Playing" folder in "Better Now Playing Watch App" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -114,6 +134,15 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		BB51A1A32D68B19500FB7C90 /* Better Now Playing Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BB51A1A82D68B19500FB7C90 /* Exceptions for "Better Now Playing Watch App" folder in "Better Now Playing" target */,
+				BB51A1A92D68B19500FB7C90 /* Exceptions for "Better Now Playing Watch App" folder in "Better Now Playing Watch App" target */,
+			);
+			path = "Better Now Playing Watch App";
+			sourceTree = "<group>";
+		};
 		BB95F4162CAD7717000A9A91 /* Better Now Playing */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -121,11 +150,6 @@
 				BB9B5D222D2EC481007504EB /* Exceptions for "Better Now Playing" folder in "Better Now Playing WidgetsExtension" target */,
 			);
 			path = "Better Now Playing";
-			sourceTree = "<group>";
-		};
-		BB95F43E2CAD7719000A9A91 /* Better Now Playing Watch App */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Better Now Playing Watch App";
 			sourceTree = "<group>";
 		};
 		BBA6DEBB2CD140F5001B0B3F /* Better Now Playing Widgets */ = {
@@ -179,8 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				BBA15BAD2CE4E7F800B69AAA /* Better Now Playing WidgetsExtension.entitlements */,
+				BB51A1A32D68B19500FB7C90 /* Better Now Playing Watch App */,
 				BB95F4162CAD7717000A9A91 /* Better Now Playing */,
-				BB95F43E2CAD7719000A9A91 /* Better Now Playing Watch App */,
 				BBA6DEBB2CD140F5001B0B3F /* Better Now Playing Widgets */,
 				BB823CA62CC1CAEC001910AA /* Frameworks */,
 				BB95F4152CAD7717000A9A91 /* Products */,
@@ -216,6 +240,7 @@
 				BB95F43D2CAD7719000A9A91 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				BB51A1A32D68B19500FB7C90 /* Better Now Playing Watch App */,
 				BB95F4162CAD7717000A9A91 /* Better Now Playing */,
 			);
 			name = "Better Now Playing";
@@ -240,9 +265,6 @@
 			);
 			dependencies = (
 				BBA6DEC42CD140F6001B0B3F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BB95F43E2CAD7719000A9A91 /* Better Now Playing Watch App */,
 			);
 			name = "Better Now Playing Watch App";
 			packageProductDependencies = (
@@ -576,7 +598,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Better-Now-Playing-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Better Now Playing";
+				INFOPLIST_KEY_CFBundleDisplayName = BNP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Needed to Function";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -620,7 +642,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Better-Now-Playing-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Better Now Playing";
+				INFOPLIST_KEY_CFBundleDisplayName = BNP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Needed to Function";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
