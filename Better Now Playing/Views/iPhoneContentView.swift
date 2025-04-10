@@ -12,12 +12,6 @@ struct iPhoneContentView: View {
     private let defaultPlayer: CurrentMusicPlayer = .spotify
     private let topBarHeight: CGFloat = 85
     private let musicDistanceFromTopBar: CGFloat = 50
-    //Note - Spotify/AP will go infront of the text
-    private let barMessages: [String] = [
-        " not connected",
-        " connected",
-        " Error"
-    ]
     
     
     
@@ -54,7 +48,9 @@ struct iPhoneContentView: View {
     //MARK: Players & Watch Connectivity
     @StateObject var apPlayer: AppleMusicPlayer = AppleMusicPlayer()
     var spotifyPlayer: SpotifyManager = SpotifyManager()
-
+    
+    var manager = iPhoneConnectivityManager.shared
+    
     // Computed property to determine dynamic colors based on album art brightness
     var dynamicColors: (text: Color, buttonBackground: Color, buttonIcon: Color) {
         if let brightness = currentSongArtwork.averageBrightness(), brightness > 0.7 {
@@ -173,6 +169,12 @@ struct iPhoneContentView: View {
                             currentPlayer = .appleMusic
                             checkTopBarStatus()
                             updateInfo()
+                            manager.sendUserInfo(title: currentSongName,
+                                                 artist: currentSongArtist,
+                                                 albumTitle: currentSongAlbum,
+                                                 albumArt: currentSongArtwork,
+                                                 currentPlayer: .appleMusic,
+                                                 currentStatus: .unknown)
                         }) {
                             Label("Apple Music", systemImage: "music.note.list")
                         }
@@ -220,17 +222,14 @@ struct iPhoneContentView: View {
                             
                         }
                         .disabled(apPlayer.currentAuthStatus != .notDetermined)
-                        
-                        Text("Auth Stuff Here")
                     }
                     
                     Section {
-                        Text("Widget Settings")
-                    }
-                    
-                    Section {
-                        Text("Version: x.x.x")
-                        Text("Debug Menu Here")
+                        Text("Version: 1.0")
+                        Text("Debug Buttons")
+                        Button("UserForceSend") {
+                            manager.sendUserInfo(title: currentSongName, artist: currentSongArtist, albumTitle: currentSongAlbum, albumArt: currentSongArtwork, currentPlayer: currentPlayer, currentStatus: .online)
+                        }
                     }
                 }
                 Spacer()
@@ -265,6 +264,25 @@ struct iPhoneContentView: View {
             //Reciver for Spotify Errors
             showErrorActive = true
             defaultInfo()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .remoteSendDataCommand)) { notification in
+            if spotifyPlayer.currentStatus != .online {
+                spotifyPlayer.attemptAuth()
+            }
+            manager.sendUserInfo(title: currentSongName, artist: currentSongArtist, albumTitle: currentSongAlbum, albumArt: currentSongArtwork, currentPlayer: .spotify, currentStatus: .online)
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .remoteChangePlayerCommand)) { notification in
+            if let userInfo = notification.userInfo,
+               let player = userInfo["player"] as? String {
+                switch player {
+                case "appleMusic":
+                    currentPlayer = .appleMusic
+                case "spotify":
+                    currentPlayer = .spotify
+                default:
+                    print("Unknown player received: \(player)")
+                }
+            }
         }
         
 
@@ -349,10 +367,9 @@ struct iPhoneContentView: View {
     //Updates the currently shown music.
     
     //MARK: Music Info Functions
-    //Updates the current info
+    //Updates the current info 
     func updateInfo() {
         if currentPlayer == .appleMusic {
-            apPlayer.updateCurrentSong()
             currentSongName = apPlayer.currentSongName ?? "-"
             currentSongArtist = apPlayer.currentSongArtist ?? "No Song Currently Playing"
             currentSongAlbum = apPlayer.currentSongAlbum ?? "-"
@@ -363,6 +380,9 @@ struct iPhoneContentView: View {
                 currentSongArtist = spotifyPlayer.currentTrackArtist ?? "No Song Currently Playing"
                 currentSongAlbum = spotifyPlayer.currentTrackAlbumName ?? "-"
                 currentSongArtwork = spotifyPlayer.currentTrackImage ?? UIImage(named: "MusicBlank")!
+                
+//                manager.sendNowPlayingData(title: currentSongName, artist: currentSongArtist, albumTitle: currentSongAlbum, albumArt: currentSongArtwork)
+                manager.sendUserInfo(title: currentSongName, artist: currentSongArtist, albumTitle: currentSongAlbum, albumArt: currentSongArtwork, currentPlayer: .spotify, currentStatus: .online)
             } else {
                 print("Spotify is not connected")
                 defaultInfo()
@@ -408,7 +428,7 @@ struct iPhoneContentView: View {
             barColor = .red
             //barText = "Apple Music"+barMessages[0]
             barText = "Apple Music: Currently Unavailable"
-            interactText = "Try again later."
+            interactText = "(No Auto Refresh)"
         }
     }
 }
@@ -418,11 +438,11 @@ struct iPhoneContentView: View {
 
 
 //MARK: Custom Types & Extras
-enum CurrentMusicPlayer {
-    case none
-    case appleMusic
-    case spotify
-}
+//enum CurrentMusicPlayer {
+//    case none
+//    case appleMusic
+//    case spotify
+//}
 #Preview {
     iPhoneContentView()
 }

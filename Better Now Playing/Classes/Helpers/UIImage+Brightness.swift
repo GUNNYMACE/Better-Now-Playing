@@ -22,3 +22,10 @@ extension UIImage {
         return (red + green + blue) / 3.0
     }
 }
+
+extension String {
+    func width(usingFont font: UIFont) -> CGFloat {
+        let attributes = [NSAttributedString.Key.font: font]
+        return self.size(withAttributes: attributes).width
+    }
+}
