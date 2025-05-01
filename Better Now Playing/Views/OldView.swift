@@ -7,6 +7,8 @@
 //  Main View for Better Now Playing
 //
 
+//Note: Old UI the app used to use.
+
 /*
 
 import SwiftUI

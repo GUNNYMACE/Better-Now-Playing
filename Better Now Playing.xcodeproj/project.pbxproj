@@ -98,7 +98,6 @@
 			membershipExceptions = (
 				Assets.xcassets,
 				Better_Now_PlayingApp.swift,
-				ExtensionDelegate.swift,
 				"Preview Content/Preview Assets.xcassets",
 				WatchConnectivityManager.swift,
 				WatchContentView.swift,
@@ -110,7 +109,6 @@
 			membershipExceptions = (
 				Assets.xcassets,
 				Better_Now_PlayingApp.swift,
-				ExtensionDelegate.swift,
 				"Preview Content/Preview Assets.xcassets",
 				WatchConnectivityManager.swift,
 				WatchContentView.swift,
@@ -121,9 +119,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Classes/Helpers/UIImage+Brightness.swift",
-				Classes/WatchConnectivty/ConnectivityManager.swift,
-				Classes/WatchConnectivty/MusicMetaData.swift,
-				Classes/WatchConnectivty/ProgramViewModel.swift,
 			);
 			target = BB95F4392CAD7719000A9A91 /* Better Now Playing Watch App */;
 		};
